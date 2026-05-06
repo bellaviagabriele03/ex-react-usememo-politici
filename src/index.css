@@ -1,0 +1,57 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: black;
+}
+
+/* UTILITY */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    background-color: darkgray;
+    color: black;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+    border-bottom: 5px solid white;
+    color: whitesmoke;
+
+}
+
+.card p {
+    font-size: 20px;
+
+}
+
+.card span {
+    background-color: goldenrod;
+    border-bottom: 1px solid black;
+
+}
