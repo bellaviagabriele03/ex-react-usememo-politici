@@ -15,18 +15,20 @@ function App() {
     const data = await res.json();
     setUsers(data)
     setFilterArray(data)
+
+
   }
 
   function filters() {
 
     if (search !== "") {
-      console.log("valore input iniziale:", search);
+
 
 
       const filterUser = users.filter(u => u.name.toLowerCase().includes(search.toLowerCase()) || u.biography.toLowerCase().includes(search.toLowerCase()))
       setFilterArray(filterUser)
       setSearch("")
-      console.log("valore input dopo:", search);
+
 
     }
   }
@@ -36,7 +38,6 @@ function App() {
       setFilterArray(users)
     }
   }
-
 
 
   return (
@@ -63,7 +64,7 @@ function App() {
 
         </div>
 
-        {users.length > 0 && (
+        {filterArray.length > 0 && (
           <>
             {filterArray.map((u, i) => (
               <Card user={u} key={i} />

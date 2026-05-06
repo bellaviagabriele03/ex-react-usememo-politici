@@ -1,7 +1,11 @@
 import { memo } from "react"
+let renderCounter = 0;
+const Card = memo(({ user }) => {
 
-export default function Card({ user }) {
+    renderCounter++;
+    console.log("Render Counter:", renderCounter);
 
+    
 
 
     return (
@@ -15,5 +19,7 @@ export default function Card({ user }) {
 
         </>
     )
-}
+});
+
+export default Card;
 
